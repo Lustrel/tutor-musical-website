@@ -1,3 +1,5 @@
+@spacing: 30px;
+
 .lst-banner-section {
 	background-color: @primary-color;
 	background-image: url(../images/banner-bg.png);
@@ -8,17 +10,24 @@
 	height: 675px;
 	padding: 100px 0;
 
+	.lst-title {
+		font-size: 24px;
+		font-weight: 700;
+		margin-bottom: @spacing;
+	}
+
 	.lst-divider {
 		background: white;
 		display: inline-block;
 		height: 1px;
+		margin-bottom: @spacing;
 		width: 70px;
 	}
 
 	.lst-text {
 		font-size: 18px;
 		font-weight: 300;
-		margin-bottom: 25px;
+		margin-bottom: @spacing;
 	}
 
 	.lst-snapshots {

@@ -3,6 +3,12 @@
 	padding: 0 25px;
 	vertical-align: middle;
 	white-space: normal;
+
+	@media (max-width: 767px) {
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
 }
 
 .lst-column-12,
@@ -10,13 +16,9 @@
 .lst-column-4 {
 	.lst-column;
 	width: 100%;
-
-	&:not(:last-child) {
-		margin-bottom: 30px;
-	}
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
 	.lst-column-4 { width: 33%; }
 	.lst-column-6 { width: 50%; }
 }
