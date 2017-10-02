@@ -7,8 +7,14 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: white;
-	height: 675px;
-	padding: 100px 0;
+	padding: 40px 0;
+	text-align: center;
+
+	@media (min-width: 768px){
+		height: 675px;
+		padding: 100px 0;
+		text-align: left;
+	}
 
 	.lst-title {
 		font-size: 24px;
@@ -32,5 +38,7 @@
 
 	.lst-snapshots {
 		float: right;
+		max-width: 343px;
+		width: 100%;
 	}
 }

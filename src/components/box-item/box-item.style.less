@@ -1,8 +1,12 @@
 .lst-box-item {
 	background: white;
-	padding: 40px 40px 25px 40px;
+	padding: 20px;
 	position: relative;
 	text-align: center;
+
+	@media (min-width: 768px){
+		padding: 40px 40px 25px 40px;
+	}
 
 	> .lst-indicator {
 		.border-radius(50%);

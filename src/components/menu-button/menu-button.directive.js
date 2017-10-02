@@ -16,7 +16,7 @@
 			},
 			link: function($scope){
 				var $overlay = $(".lst-menu-button__overlay");
-				var $items = $($scope.menu);
+				var $items = $($scope.menu).clone();
 
 				addContentToOverlay();
 

@@ -24,11 +24,15 @@
 }
 
 .lst-row {
-	white-space: nowrap;
-}
+	white-space: normal;
+	
+	&:not(:last-child){
+		margin-bottom: 20px;
+	}
 
-.lst-row:not(:last-child) {
-	margin-bottom: 20px;
-	white-space: nowrap;
+	@media (min-width: 768px) {
+		margin-bottom: 0;
+		white-space: nowrap;
+	}
 }
 
