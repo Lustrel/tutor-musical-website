@@ -1,7 +1,21 @@
 .lst-box-item {
 	background: white;
 	padding: 40px 40px 25px 40px;
+	position: relative;
 	text-align: center;
+
+	> .lst-indicator {
+		.border-radius(50%);
+		background: @primary-color;
+		color: white;
+		font-weight: 700;
+		height: 30px;
+		left: -15px;
+		padding: 5px;
+		position: absolute;
+		top: -15px;
+		width: 30px;
+	}
 
 	> .lst-title { 
 		color: @primary-color;
