@@ -1,7 +1,17 @@
 .lst-box-item {
 	background: white;
+	padding: 40px;
+	text-align: center;
 
-	.lst-title { color: @primary-color; }
+	> .lst-title { 
+		color: @primary-color;
+		font-size: 18px;
+		margin-bottom: 30px;
+	}
+
+	> .lst-content:not(:last-child) {
+		margin-bottom: 30px;
+	}
 
 	.border-radius(5px);
 	.box-shadow(0 0 10px rgba(0, 0, 0, .8))

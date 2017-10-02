@@ -1,8 +1,16 @@
 .lst-work-section {
+	.lst-content-section;
+
 	background: url(../images/work-bg.png) no-repeat;
 	background-size: cover;
 	background-position: center;
-	padding: 50px 0;
 
-	.lst-title { color: white; }
+	.lst-content-container {
+		> .lst-title { 
+			color: white;
+			font-weight: 700;
+
+			.text-shadow(0 2px 2px rgba(0, 0, 0, .75))
+		}
+	}
 }
