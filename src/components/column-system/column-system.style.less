@@ -5,19 +5,20 @@
 	white-space: normal;
 }
 
-.lst-column-12 {
-	.lst-column;
-	width: 100%;
-}
-
-.lst-column-6 {
-	.lst-column;
-	width: 50%;
-}
-
+.lst-column-12,
+.lst-column-6,
 .lst-column-4 {
 	.lst-column;
-	width: 33%;
+	width: 100%;
+
+	&:not(:last-child) {
+		margin-bottom: 30px;
+	}
+}
+
+@media (min-width: 769px) {
+	.lst-column-4 { width: 33%; }
+	.lst-column-6 { width: 50%; }
 }
 
 .lst-row:not(:last-child) {
