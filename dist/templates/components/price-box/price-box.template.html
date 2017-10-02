@@ -1,0 +1,10 @@
+<div class="lst-price-box" ng-class="{ '-featured': featured === 'yes' }">
+    <h3 class="lst-title" ng-bind="title"></h3>
+    <span class="lst-price" ng-bind="('R$ ' + price)"></span>
+    <p class="lst-description">
+        <ng-transclude></ng-transclude>
+    </p>
+    <a href="#" class="lst-buy">
+        Começar minha transformação
+    </a>
+</div>

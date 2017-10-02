@@ -1,0 +1,50 @@
+.lst-menu-button {
+	float: right;
+	height: 44px;
+	margin-top: 13px;
+	padding: 9px 5px;
+	width: 44px;
+
+	.lst-bar {
+		background: black;
+		height: 5px;
+		margin-bottom: 5px;
+		width: 100%;
+	}
+
+	&__close {
+		position: absolute;
+		top: 40px;
+		right: 40px;
+	}
+
+	&__overlay {
+		background: rgba(0, 0, 0, .9);
+		bottom: 0;
+		color: white;
+		display: none;
+		font-size: 22px;
+		left: 0;
+		position: absolute;
+		right: 0;
+		text-align: center;
+		top: 0;
+
+		.lst-items {
+			left: 50%;
+			position: absolute;
+			top: 50%;
+
+			.translate(-50%, -50%);
+		}
+
+		.lst-item {
+			line-height: 44px;
+
+			a {
+				color: white;
+			}
+		}
+	}
+}
+
