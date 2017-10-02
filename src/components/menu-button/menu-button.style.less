@@ -1,27 +1,32 @@
 .lst-menu-button {
 	float: right;
-	height: 44px;
-	margin-top: 13px;
-	padding: 9px 5px;
-	width: 44px;
 
 	.lst-bar {
 		background: black;
 		height: 5px;
+		margin: 0 auto;
 		margin-bottom: 5px;
-		width: 100%;
+		width: 30px;
+	}
+
+	&__button {
+		height: 44px;
+		margin-top: 5px;
+		padding: 9px 5px;
+		width: 44px;
 	}
 
 	&__close {
+		font-weight: 700;
+		font-size: 30px;
 		position: absolute;
-		top: 40px;
-		right: 40px;
+		top: 25px;
+		right: 32px;
 	}
 
 	&__overlay {
-		background: rgba(0, 0, 0, .9);
+		background: rgba(255, 255, 255, .95);
 		bottom: 0;
-		color: white;
 		display: none;
 		font-size: 22px;
 		left: 0;
@@ -31,19 +36,30 @@
 		top: 0;
 
 		.lst-items {
+			display: inline-block;
 			left: 50%;
 			position: absolute;
 			top: 50%;
+			width: 100%;
+			max-width: 240px;
 
 			transform: translate(-50%, -50%);
 			-webkit-transform: translate(-50%, -50%);
 		}
 
 		.lst-item {
+			display: inline-block;
 			line-height: 44px;
+			margin: 0;
+			width: 100%;
+
+			&.-featured {
+				padding: 0 10px !important;
+			}
 
 			a {
-				color: white;
+				color: #515151;
+				text-decoration: none;
 			}
 		}
 	}

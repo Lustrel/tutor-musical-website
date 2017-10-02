@@ -15,27 +15,23 @@
 				menu: "@"
 			},
 			link: function($scope){
+				var $overlay = $(".lst-menu-button__overlay");
+				var $items = $($scope.menu);
+
+				addContentToOverlay();
+
+				function addContentToOverlay(){
+					$overlay.append($items);
+				}
+
 				$scope.openMenu = function(){
-					var $body = $("body");
-					var $overlay = $(".lst-menu-button__overlay");
-					if(!$overlay || !$overlay.length){
-						$overlay = $('<div class="lst-menu-button__overlay"></div>');
-
-						var $close = $('<span class="lst-menu-button__close" ng-click="closeMenu()">X</span>');
-						$overlay.append($close);
-
-						var $menuContent = $($scope.menu);
-						$overlay.append($menuContent);
-
-						$body.append($overlay);
-					}
-
-					$overlay.css("display", "block");
-					$body.css("overflow", "hidden");
+					console.log("Opening menu");
+					$overlay.css({ display: 'block' });
 				};
 
 				$scope.closeMenu = function(){
 					console.log("Closing menu");
+					$overlay.css({ display: 'none' });
 				};
 			}
 		};

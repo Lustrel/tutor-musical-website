@@ -56,27 +56,23 @@ angular
 				menu: "@"
 			},
 			link: function($scope){
+				var $overlay = $(".lst-menu-button__overlay");
+				var $items = $($scope.menu);
+
+				addContentToOverlay();
+
+				function addContentToOverlay(){
+					$overlay.append($items);
+				}
+
 				$scope.openMenu = function(){
-					var $body = $("body");
-					var $overlay = $(".lst-menu-button__overlay");
-					if(!$overlay || !$overlay.length){
-						$overlay = $('<div class="lst-menu-button__overlay"></div>');
-
-						var $close = $('<span class="lst-menu-button__close" ng-click="closeMenu()">X</span>');
-						$overlay.append($close);
-
-						var $menuContent = $($scope.menu);
-						$overlay.append($menuContent);
-
-						$body.append($overlay);
-					}
-
-					$overlay.css("display", "block");
-					$body.css("overflow", "hidden");
+					console.log("Opening menu");
+					$overlay.css({ display: 'block' });
 				};
 
 				$scope.closeMenu = function(){
 					console.log("Closing menu");
+					$overlay.css({ display: 'none' });
 				};
 			}
 		};
@@ -139,18 +135,21 @@ angular
 		return {
 			restrict: "A",
 			link: function(theScope, theElement, theAttributes){
-				// If window's width is less than 768, we don't need it
-				var $window = $(window);
-				if($window.width() < 768)
-					return;
+				resizeElementsHeight();
 
-				var $boxes = $(theElement).find("[box-height-equalized]");
+				function resizeElementsHeight() {
+					// If window's width is less than 768, we don't need it
+					var $window = $(window);
+					if($window.width() < 768)
+						return;
 
-				var biggerHeight = getBiggerHeight($boxes);
-				equalizeHeight($boxes, biggerHeight);
+					var $boxes = $(theElement).find("[box-height-equalized]");
 
-				function getBiggerHeight($elements)
-				{
+					var biggerHeight = getBiggerHeight($boxes);
+					equalizeHeight($boxes, biggerHeight);
+				}
+
+				function getBiggerHeight($elements) {
 					var bigger = 0;
 					$elements.each(function(){
 						var height = $(this).outerHeight();
@@ -160,8 +159,7 @@ angular
 					return bigger;
 				}
 				
-				function equalizeHeight($elements, height)
-				{
+				function equalizeHeight($elements, height) {
 					$elements.each(function(){
 						$(this).css({ height: height + 'px' });
 					});

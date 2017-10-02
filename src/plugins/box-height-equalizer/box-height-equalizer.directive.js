@@ -9,18 +9,21 @@
 		return {
 			restrict: "A",
 			link: function(theScope, theElement, theAttributes){
-				// If window's width is less than 768, we don't need it
-				var $window = $(window);
-				if($window.width() < 768)
-					return;
+				resizeElementsHeight();
 
-				var $boxes = $(theElement).find("[box-height-equalized]");
+				function resizeElementsHeight() {
+					// If window's width is less than 768, we don't need it
+					var $window = $(window);
+					if($window.width() < 768)
+						return;
 
-				var biggerHeight = getBiggerHeight($boxes);
-				equalizeHeight($boxes, biggerHeight);
+					var $boxes = $(theElement).find("[box-height-equalized]");
 
-				function getBiggerHeight($elements)
-				{
+					var biggerHeight = getBiggerHeight($boxes);
+					equalizeHeight($boxes, biggerHeight);
+				}
+
+				function getBiggerHeight($elements) {
 					var bigger = 0;
 					$elements.each(function(){
 						var height = $(this).outerHeight();
@@ -30,8 +33,7 @@
 					return bigger;
 				}
 				
-				function equalizeHeight($elements, height)
-				{
+				function equalizeHeight($elements, height) {
 					$elements.each(function(){
 						$(this).css({ height: height + 'px' });
 					});
