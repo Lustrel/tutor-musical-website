@@ -1,0 +1,32 @@
+.lst-register-section {
+	.lst-content-section;
+	background: @primary-color;
+	text-align: center;
+
+	.lst-content-container {
+		> .lst-title { 
+			color: white;
+			font-weight: 700; 
+		}
+
+		.lst-box-item {
+			text-align: left;
+		}
+
+		.lst-label { 
+			color: @primary-color;
+			display: inline-block;
+			font-size: 14px;
+			width: 100%; 
+		}
+		
+		.lst-input:not([type=checkbox]) {
+			.border-radius(5px);
+			border: 1px solid #8E8E8E;
+			font-size: 16px;
+			height: 44px;
+			padding: 15px;
+			width: 100%;
+		}
+	}
+}
