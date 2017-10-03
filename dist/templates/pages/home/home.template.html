@@ -203,7 +203,7 @@
 						</div>
 					</div>
 
-					<a class="lst-button-cat" ng-click="register()">Cadastrar</a>
+					<a class="lst-button-cat" ng-class="{disabled: !areFieldsValid()}" ng-click="register()">Cadastrar</a>
 				</form>
 			</div>
 		</div>

@@ -140,15 +140,17 @@ angular
 			newsletter: true
 		};
 
+		$scope.areFieldsValid = function(){
+			return (
+				!!$scope.newUser.firstName &&
+				!!$scope.newUser.lastName &&
+				!!$scope.newUser.email &&
+				!!$scope.newUser.birthday
+			);
+		}
+
 		$scope.register = function(){
-			if(
-				!$scope.newUser.firstName ||
-				!$scope.newUser.lastName ||
-				!$scope.newUser.email ||
-				!$scope.newUser.birthday
-			){
-				return false;
-			}
+			if(!$scope.areFieldsValid()) return false;
 
 			$http
 				.post("http://tutormusical-api.azurewebsites.net/api/Account/Register", $scope.newUser)
