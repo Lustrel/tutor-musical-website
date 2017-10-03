@@ -168,7 +168,7 @@
 	</div>
 </section>
 
-<section class="lst-register-section">
+<section class="lst-register-section" ng-controller="RegisterController as controller">
 	<div class="lst-content-container">
 		<h2 class="lst-title">Crie sua conta e comece a usar o aplicativo</h2>
 
@@ -178,32 +178,32 @@
 					<div class="lst-row">
 						<div class="lst-column-6">
 							<label class="lst-label">Nome:</label>
-							<input class="lst-input" placeholder="Luís">
+							<input class="lst-input" placeholder="Matheus" ng-model="newUser.firstName">
 						</div>
 
 						<div class="lst-column-6">
 							<label class="lst-label">Sobrenome:</label>
-							<input class="lst-input" placeholder="Carlos">
+							<input class="lst-input" placeholder="Velloso" ng-model="newUser.lastName">
 						</div>
 					</div>
 					<div class="lst-row">
 						<div class="lst-column-6">
 							<label class="lst-label">E-mail:</label>
-							<input class="lst-input" placeholder="luis@email.com">
+							<input class="lst-input" placeholder="luis@email.com" ng-model="newUser.email">
 						</div>
 
 						<div class="lst-column-6">
 							<label class="lst-label">Data de nascimento:</label>
-							<input class="lst-input" placeholder="01/01/1990">
+							<input class="lst-input" placeholder="01/01/1990" ng-model="newUser.birthday">
 						</div>
 					</div>
 					<div class="lst-row">
 						<div class="lst-column-6">
-							<input class="lst-input" type="checkbox">Receber novidades do Tutor Musical
+							<input class="lst-input" type="checkbox" ng-model="newUser.newsletter">Receber novidades do Tutor Musical
 						</div>
 					</div>
 
-					<a class="lst-button-cat" href="#">Cadastrar</a>
+					<a class="lst-button-cat" ng-click="register()">Cadastrar</a>
 				</form>
 			</div>
 		</div>
