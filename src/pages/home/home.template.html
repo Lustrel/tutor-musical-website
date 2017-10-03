@@ -178,23 +178,23 @@
 					<div class="lst-row">
 						<div class="lst-column-6">
 							<label class="lst-label">Nome:</label>
-							<input class="lst-input" placeholder="Matheus" ng-model="newUser.firstName">
+							<input class="lst-input" placeholder="Matheus" ng-required ng-model="newUser.firstName">
 						</div>
 
 						<div class="lst-column-6">
 							<label class="lst-label">Sobrenome:</label>
-							<input class="lst-input" placeholder="Velloso" ng-model="newUser.lastName">
+							<input class="lst-input" placeholder="Velloso" ng-required ng-model="newUser.lastName">
 						</div>
 					</div>
 					<div class="lst-row">
 						<div class="lst-column-6">
 							<label class="lst-label">E-mail:</label>
-							<input class="lst-input" placeholder="luis@email.com" ng-model="newUser.email">
+							<input class="lst-input" placeholder="luis@email.com" ng-required ng-model="newUser.email">
 						</div>
 
 						<div class="lst-column-6">
 							<label class="lst-label">Data de nascimento:</label>
-							<input class="lst-input" mask="31/12/9999" placeholder="01/01/1990" ng-model="newUser.birthday">
+							<input class="lst-input" mask="31/12/9999" placeholder="01/01/1990" ng-required ng-model="newUser.birthday">
 						</div>
 					</div>
 					<div class="lst-row">
@@ -236,7 +236,7 @@
 			<div class="lst-column-4">
 				<h4 class="lst-title">Redes sociais</h4>
 				<ul>
-					<li class="lst-item"><a href="#">Facebook</a></li>
+					<li class="lst-item"><a target="_blank" href="https://www.facebook.com/tutormusical/">Facebook</a></li>
 					<li class="lst-item"><a href="#">Instagram</a></li>
 				</ul>
 			</div>

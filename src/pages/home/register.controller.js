@@ -15,7 +15,15 @@
 		};
 
 		$scope.register = function(){
-			console.log($scope.newUser);
+			if(
+				!$scope.newUser.firstName ||
+				!$scope.newUser.lastName ||
+				!$scope.newUser.email ||
+				!$scope.newUser.birthday
+			){
+				return false;
+			}
+
 			$http
 				.post("http://tutormusical-api.azurewebsites.net/api/Account/Register", $scope.newUser)
 				.then(function(res){
