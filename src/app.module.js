@@ -1,7 +1,7 @@
 "use strict";
 
 angular
-	.module("Website", ["ngRoute"])
+	.module("Website", ["ngRoute", "ngMask"])
 	.config(function($routeProvider, $httpProvider){
 		var templatesPath = "./dist/templates/pages";
 
