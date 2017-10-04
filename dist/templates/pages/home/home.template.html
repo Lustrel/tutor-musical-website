@@ -194,10 +194,15 @@
 
 						<div class="lst-column-6">
 							<label class="lst-label">Data de nascimento:</label>
-							<input class="lst-input" mask="39/12/9999" placeholder="01/01/1990" ng-required ng-model="newUser.birthday">
+							<input class="lst-input" mask="39/12/9999" restrict="reject" placeholder="01/01/1990" ng-required ng-model="newUser.birthday">
 						</div>
 					</div>
 					<div class="lst-row">
+						<div class="lst-column-6">
+							<label class="lst-label">Telefone:</label>
+							<input class="lst-input" mask="(99) ?9? 9999-9999" restrict="reject" placeholder="(31) 99999-9999" ng-required ng-model="newUser.cellphone">
+						</div>
+
 						<div class="lst-column-6">
 							<input class="lst-input" type="checkbox" ng-model="newUser.newsletter">Receber novidades do Tutor Musical
 						</div>

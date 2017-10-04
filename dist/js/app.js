@@ -137,6 +137,7 @@ angular
 			lastName: '',
 			email: '',
 			birthday: '',
+			cellphone: '',
 			newsletter: true
 		};
 
@@ -145,7 +146,8 @@ angular
 				!!$scope.newUser.firstName &&
 				!!$scope.newUser.lastName &&
 				!!$scope.newUser.email &&
-				!!$scope.newUser.birthday
+				!!$scope.newUser.birthday &&
+				!!$scope.newUser.cellphone
 			);
 		}
 
