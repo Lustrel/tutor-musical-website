@@ -174,7 +174,7 @@
 
 		<div class="lst-row">
 			<div class="lst-column-12">
-				<form class="lst-box-item">
+				<form class="lst-box-item -left" ng-show="!alreadyRegistered">
 					<div class="lst-row">
 						<div class="lst-column-6">
 							<label class="lst-label">Nome:</label>
@@ -205,6 +205,11 @@
 
 					<a class="lst-button-cat" ng-class="{disabled: !areFieldsValid()}" ng-click="register()">Cadastrar</a>
 				</form>
+
+				<div class="lst-box-item" ng-show="alreadyRegistered">
+					<h3 class="lst-title">Uhul! Te registramos com sucesso!</h3>
+					<p class="lst-content">Tudo que você precisa agora é baixar o nosso aplicativo e fazer login com a sua conta nova.</p>
+				</div>
 			</div>
 		</div>
 	</div>

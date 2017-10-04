@@ -151,12 +151,12 @@ angular
 
 		$scope.register = function(){
 			if(!$scope.areFieldsValid()) return false;
-
+			
 			$http
 				.post("http://tutormusical-api.azurewebsites.net/api/Account/Register", $scope.newUser)
 				.then(function(res){
-					$scope.successMessage = "Oba! Você se cadastrou no app. Que tal fazer download dele agora?"
-				});
+					$scope.alreadyRegistered = true;
+				}, function(res){});
 		};
 	}
 })();; 
